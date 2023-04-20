@@ -29,7 +29,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.21.4.tgz#457ffe647c480dff59c2be092fc3acf71195c87f"
   integrity sha512-/DYyDpeCfaVinT40FPGdkkb+lYSKvsVuMjDAG7jPOWWiM1ibOaB9CXJAlc4d1QpP/U2q2P9jbrSlClKSErd55g==
 
-"@babel/core@^7.11.6", "@babel/core@^7.12.10", "@babel/core@^7.12.3", "@babel/core@^7.15.0", "@babel/core@^7.19.6", "@babel/core@^7.20.2", "@babel/core@^7.7.5":
+"@babel/core@^7.11.6", "@babel/core@^7.12.10", "@babel/core@^7.12.3", "@babel/core@^7.15.0", "@babel/core@^7.19.6", "@babel/core@^7.20.12", "@babel/core@^7.20.2", "@babel/core@^7.7.5":
   version "7.21.4"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.21.4.tgz#c6dc73242507b8e2a27fd13a9c1814f9fa34a659"
   integrity sha512-qt/YV149Jman/6AfmlxJ04LMIu8bMoyl3RB91yTFrxQmgbrSvQMy7cI8Q62FHx1t8wJ8B5fu0UDoLwHAhUo1QA==
@@ -795,6 +795,20 @@
   dependencies:
     "@babel/plugin-transform-react-jsx" "^7.18.6"
 
+"@babel/plugin-transform-react-jsx-self@^7.18.6":
+  version "7.21.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.21.0.tgz#ec98d4a9baafc5a1eb398da4cf94afbb40254a54"
+  integrity sha512-f/Eq+79JEu+KUANFks9UZCcvydOOGMgF7jBrcwjHa5jTZD8JivnhCJYvmlhR/WTXBWonDExPoW0eO/CR4QJirA==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.20.2"
+
+"@babel/plugin-transform-react-jsx-source@^7.19.6":
+  version "7.19.6"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.19.6.tgz#88578ae8331e5887e8ce28e4c9dc83fb29da0b86"
+  integrity sha512-RpAi004QyMNisst/pvSanoRdJ4q+jMCWyk9zdw/CyLB9j8RXEahodR6l2GyttDRyEVWZtbN+TpLiHJ3t34LbsQ==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.19.0"
+
 "@babel/plugin-transform-react-jsx@^7.18.6", "@babel/plugin-transform-react-jsx@^7.19.0":
   version "7.21.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.21.0.tgz#656b42c2fdea0a6d8762075d58ef9d4e3c4ab8a2"
@@ -1518,6 +1532,16 @@
     "@types/yargs" "^17.0.8"
     chalk "^4.0.0"
 
+"@joshwooding/vite-plugin-react-docgen-typescript@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@joshwooding/vite-plugin-react-docgen-typescript/-/vite-plugin-react-docgen-typescript-0.2.1.tgz#930f6f0382520e4ba349eea1b152f9ae49364516"
+  integrity sha512-ou4ZJSXMMWHqGS4g8uNRbC5TiTWxAgQZiVucoUrOCWuPrTbkpJbmVyIi9jU72SBry7gQtuMEDp4YR8EEXAg7VQ==
+  dependencies:
+    glob "^7.2.0"
+    glob-promise "^4.2.0"
+    magic-string "^0.27.0"
+    react-docgen-typescript "^2.2.2"
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
@@ -1555,7 +1579,7 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz#add4c98d341472a289190b424efbdb096991bb24"
   integrity sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==
 
-"@jridgewell/sourcemap-codec@^1.4.10":
+"@jridgewell/sourcemap-codec@^1.4.10", "@jridgewell/sourcemap-codec@^1.4.13":
   version "1.4.15"
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz#d7c6e6755c78567a951e04ab52ef0fd26de59f32"
   integrity sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==
@@ -2106,7 +2130,7 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@rollup/pluginutils@^4.1.2", "@rollup/pluginutils@^4.2.1":
+"@rollup/pluginutils@^4.1.2", "@rollup/pluginutils@^4.2.0", "@rollup/pluginutils@^4.2.1":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
   integrity sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==
@@ -2368,6 +2392,32 @@
     fs-extra "^11.1.0"
     process "^0.11.10"
     util "^0.12.4"
+
+"@storybook/builder-vite@7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/builder-vite/-/builder-vite-7.0.6.tgz#b4073deff8728f550a3302fb2095f143729cff7c"
+  integrity sha512-sXthWQFMKxXS8nqihB5sSyRewLpBJDL3EjwzZxz5/4zQ9XCsuGHMW7DEepX9FMWUNPDIIw3KITs4vMrCNDkXhg==
+  dependencies:
+    "@storybook/channel-postmessage" "7.0.6"
+    "@storybook/channel-websocket" "7.0.6"
+    "@storybook/client-logger" "7.0.6"
+    "@storybook/core-common" "7.0.6"
+    "@storybook/csf-plugin" "7.0.6"
+    "@storybook/mdx2-csf" "^1.0.0"
+    "@storybook/node-logger" "7.0.6"
+    "@storybook/preview" "7.0.6"
+    "@storybook/preview-api" "7.0.6"
+    "@storybook/types" "7.0.6"
+    browser-assert "^1.2.1"
+    es-module-lexer "^0.9.3"
+    express "^4.17.3"
+    fs-extra "^11.1.0"
+    glob "^8.1.0"
+    glob-promise "^6.0.2"
+    magic-string "^0.27.0"
+    remark-external-links "^8.0.0"
+    remark-slug "^6.0.0"
+    rollup "^2.25.0 || ^3.3.0"
 
 "@storybook/builder-webpack5@7.0.6":
   version "7.0.6"
@@ -2735,6 +2785,20 @@
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-7.0.6.tgz#c7baca7a09938d79f108cb70b748ab379e90774d"
   integrity sha512-pmoyspsehnaSJGYXDXK4tJTyDRiWYsb5HDwmT/ZlB5iS0PEP2vB5ZAW0M6MZPCNq+rcyIhRzWpylgccJ8OJquQ==
+
+"@storybook/react-vite@^7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/react-vite/-/react-vite-7.0.6.tgz#475fb6313bea6df57ea03a6e1f11bce937c8bc18"
+  integrity sha512-kWX0JCi5mTRPrFyp80GEHqL2DdNACA5kzDSfLXEhrxnHaMqbpFFKA385ZTlgenC3quPGTFCSI+HxHHBwvNNCXA==
+  dependencies:
+    "@joshwooding/vite-plugin-react-docgen-typescript" "0.2.1"
+    "@rollup/pluginutils" "^4.2.0"
+    "@storybook/builder-vite" "7.0.6"
+    "@storybook/react" "7.0.6"
+    "@vitejs/plugin-react" "^3.0.1"
+    ast-types "^0.14.2"
+    magic-string "^0.27.0"
+    react-docgen "6.0.0-alpha.3"
 
 "@storybook/react-webpack5@7.0.6":
   version "7.0.6"
@@ -3263,7 +3327,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/glob@^7.1.1":
+"@types/glob@^7.1.1", "@types/glob@^7.1.3":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.2.0.tgz#bc1b5bf3aa92f25bd5dd39f35c57361bdce5b2eb"
   integrity sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==
@@ -3661,6 +3725,17 @@
   dependencies:
     "@typescript-eslint/types" "5.59.0"
     eslint-visitor-keys "^3.3.0"
+
+"@vitejs/plugin-react@^3.0.1":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-3.1.0.tgz#d1091f535eab8b83d6e74034d01e27d73c773240"
+  integrity sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==
+  dependencies:
+    "@babel/core" "^7.20.12"
+    "@babel/plugin-transform-react-jsx-self" "^7.18.6"
+    "@babel/plugin-transform-react-jsx-source" "^7.19.6"
+    magic-string "^0.27.0"
+    react-refresh "^0.14.0"
 
 "@webassemblyjs/ast@1.11.5", "@webassemblyjs/ast@^1.11.5":
   version "1.11.5"
@@ -5768,6 +5843,11 @@ es-get-iterator@^1.1.2:
     isarray "^2.0.5"
     stop-iteration-iterator "^1.0.0"
 
+es-module-lexer@^0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/es-module-lexer/-/es-module-lexer-0.9.3.tgz#6f13db00cc38417137daf74366f535c8eb438f19"
+  integrity sha512-1HQ2M2sPtxwnvOvT1ZClHyQDiggdNjURWpY2we6aMKCQiUVxTmVs2UYPLIrD84sS+kMdUwfBSylbJPwNnBrnHQ==
+
 es-module-lexer@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/es-module-lexer/-/es-module-lexer-1.2.1.tgz#ba303831f63e6a394983fde2f97ad77b22324527"
@@ -5815,7 +5895,7 @@ esbuild-register@^3.4.0:
   dependencies:
     debug "^4.3.4"
 
-esbuild@^0.17.0:
+esbuild@^0.17.0, esbuild@^0.17.5:
   version "0.17.17"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.17.17.tgz#fa906ab11b11d2ed4700f494f4f764229b25c916"
   integrity sha512-/jUywtAymR8jR4qsa2RujlAF7Krpt5VWi72Q2yuLD4e/hvtNcFQ0I1j8m/bxq238pf3/0KO5yuXNpuLx8BE1KA==
@@ -6781,6 +6861,13 @@ glob-parent@^6.0.1:
   dependencies:
     is-glob "^4.0.3"
 
+glob-promise@^4.2.0:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/glob-promise/-/glob-promise-4.2.2.tgz#15f44bcba0e14219cd93af36da6bb905ff007877"
+  integrity sha512-xcUzJ8NWN5bktoTIX7eOclO1Npxd/dyVqUJxlLIDasT4C7KZyqlPIwkdJ0Ypiy3p2ZKahTjK4M9uC3sNSfNMzw==
+  dependencies:
+    "@types/glob" "^7.1.3"
+
 glob-promise@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/glob-promise/-/glob-promise-6.0.2.tgz#7c7f2a223e3aaa8f7bd7ff5f24d0ab2352724b31"
@@ -6805,7 +6892,7 @@ glob@7.1.4:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
+glob@^7.1.3, glob@^7.1.4, glob@^7.1.6, glob@^7.2.0:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.3.tgz#b8df0fb802bbfa8e89bd1d938b4e16578ed44f2b"
   integrity sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==
@@ -8513,6 +8600,13 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.8"
 
+magic-string@^0.27.0:
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.27.0.tgz#e4a3413b4bab6d98d2becffd48b4a257effdbbf3"
+  integrity sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==
+  dependencies:
+    "@jridgewell/sourcemap-codec" "^1.4.13"
+
 make-dir@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
@@ -9619,7 +9713,7 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.1.0, postcss-value-parser@^
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.3.5, postcss@^8.4.14, postcss@^8.4.19:
+postcss@^8.3.5, postcss@^8.4.14, postcss@^8.4.19, postcss@^8.4.21:
   version "8.4.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.23.tgz#df0aee9ac7c5e53e1075c24a3613496f9e6552ab"
   integrity sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA==
@@ -9835,6 +9929,22 @@ react-docgen-typescript@^2.2.2:
   resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-2.2.2.tgz#4611055e569edc071204aadb20e1c93e1ab1659c"
   integrity sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==
 
+react-docgen@6.0.0-alpha.3:
+  version "6.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-6.0.0-alpha.3.tgz#4d8a4916b45de4aadb90eb5f3a6f923edf447928"
+  integrity sha512-DDLvB5EV9As1/zoUsct6Iz2Cupw9FObEGD3DMcIs3EDFIoSKyz8FZtoWj3Wj+oodrU4/NfidN0BL5yrapIcTSA==
+  dependencies:
+    "@babel/core" "^7.7.5"
+    "@babel/generator" "^7.12.11"
+    ast-types "^0.14.2"
+    commander "^2.19.0"
+    doctrine "^3.0.0"
+    estree-to-babel "^3.1.0"
+    neo-async "^2.6.1"
+    node-dir "^0.1.10"
+    resolve "^1.17.0"
+    strip-indent "^3.0.0"
+
 react-docgen@^5.0.0:
   version "5.4.3"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-5.4.3.tgz#7d297f73b977d0c7611402e5fc2a168acf332b26"
@@ -9902,6 +10012,11 @@ react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
+
+react-refresh@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
+  integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
 react-shallow-renderer@^16.15.0:
   version "16.15.0"
@@ -10254,6 +10369,13 @@ rollup-pluginutils@^2.8.2:
   integrity sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==
   dependencies:
     estree-walker "^0.6.1"
+
+"rollup@^2.25.0 || ^3.3.0", rollup@^3.20.2:
+  version "3.20.6"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.20.6.tgz#53c0fd73e397269d2ce5f0ec12851457dd53cacd"
+  integrity sha512-2yEB3nQXp/tBQDN0hJScJQheXdvU2wFhh6ld7K/aiZ1vYcak6N/BKjY1QrU6BvO2JWYS8bEs14FRaxXosxy2zw==
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 rollup@^2.56.2:
   version "2.79.1"
@@ -11568,6 +11690,17 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+vite@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-4.3.0.tgz#1fb9432e1980cf254e1ae1b7b8981fd262c6aa49"
+  integrity sha512-JTGFgDh3dVxeGBpuQX04Up+JZmuG6wu9414Ei36vQzaEruY/M4K0AgwtuB2b4HaBgB7R8l+LHxjB0jcgz4d2qQ==
+  dependencies:
+    esbuild "^0.17.5"
+    postcss "^8.4.21"
+    rollup "^3.20.2"
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 w3c-xmlserializer@^4.0.0:
   version "4.0.0"
