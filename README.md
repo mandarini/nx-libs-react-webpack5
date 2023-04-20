@@ -10,9 +10,22 @@ yarn
 
 `@storybook/react-webpack5` does not work with libraries. This is a regression, it used to work in Storybook 6.5 when `builder: 'webpack5'` was used.
 
-## For apps
+## Solution
 
-### SWC
+Use `@storybook/react-vite` instead of `@storybook/react-webpack5` for libraries.
+
+```bash
+git checkout use-vite
+npx nx build-storybook react-nb
+npx nx build-storybook react-babel
+npx nx build-storybook react-swc
+```
+
+## Understanding the problem
+
+### For apps
+
+#### SWC
 
 All works as expected. React app using `webpack` and `swc` as compiler, builds Storybook as expected.
 
@@ -20,7 +33,7 @@ All works as expected. React app using `webpack` and `swc` as compiler, builds S
 npx nx build-storybook react-app-wp-swc
 ```
 
-### Babel
+#### Babel
 
 All works as expected. React app using `webpack` and `babel` as compiler, builds Storybook as expected.
 
@@ -28,9 +41,9 @@ All works as expected. React app using `webpack` and `babel` as compiler, builds
 npx nx build-storybook react-app-wp-babel
 ```
 
-## For libraries
+### For libraries
 
-### Non-buildable library
+#### Non-buildable library
 
 Gets error when serving and building with `@storybook/react-webpack5`.
 
@@ -46,7 +59,7 @@ npx nx build-storybook react-nb
 
 Works when I use `@storybook/react-vite` instead of `@storybook/react-webpack5`.
 
-### Rollup + Babel + `@storybook/react-webpack5`
+#### Rollup + Babel + `@storybook/react-webpack5`
 
 Library building with `rollup` and `babel` as compiler gets error when serving and building with `@storybook/react-webpack5`.
 
@@ -62,7 +75,7 @@ npx nx build-storybook react-babel
 
 Works when I use `@storybook/react-vite` instead of `@storybook/react-webpack5`.
 
-### Rollup + SWC + `@storybook/react-webpack5`
+#### Rollup + SWC + `@storybook/react-webpack5`
 
 Library building with `rollup` and `swc` as compiler gets error when serving and building with `@storybook/react-webpack5`.
 
