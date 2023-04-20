@@ -31,6 +31,43 @@
           }
         ]
       }
+    },
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/react-babel/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/react-babel",
+        "configDir": "libs/react-babel/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "react-babel:build-storybook",
+        "staticFilePath": "dist/storybook/react-babel"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "react-babel:build-storybook:ci"
+        }
+      }
     }
   }
 }

@@ -6,6 +6,10 @@
 yarn
 ```
 
+## Summary
+
+`@storybook/react-webpack5` does not work with libraries. This is a regression, it used to work in Storybook 6.5 when `builder: 'webpack5'` was used.
+
 ## For apps
 
 ### SWC

@@ -11,6 +11,43 @@
       "options": {
         "lintFilePatterns": ["libs/react-nb/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/react-nb/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/react-nb",
+        "configDir": "libs/react-nb/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "react-nb:build-storybook",
+        "staticFilePath": "dist/storybook/react-nb"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "react-nb:build-storybook:ci"
+        }
+      }
     }
   }
 }
