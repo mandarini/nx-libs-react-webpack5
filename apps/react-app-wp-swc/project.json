@@ -1,0 +1,96 @@
+{
+  "name": "react-app-wp-swc",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-app-wp-swc/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "swc",
+        "outputPath": "dist/apps/react-app-wp-swc",
+        "index": "apps/react-app-wp-swc/src/index.html",
+        "baseHref": "/",
+        "main": "apps/react-app-wp-swc/src/main.tsx",
+        "tsConfig": "apps/react-app-wp-swc/tsconfig.app.json",
+        "assets": [
+          "apps/react-app-wp-swc/src/favicon.ico",
+          "apps/react-app-wp-swc/src/assets"
+        ],
+        "styles": ["apps/react-app-wp-swc/src/styles.css"],
+        "scripts": [],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/react-app-wp-swc/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react-app-wp-swc/src/environments/environment.ts",
+              "with": "apps/react-app-wp-swc/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-app-wp-swc:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-app-wp-swc:build:development"
+        },
+        "production": {
+          "buildTarget": "react-app-wp-swc:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/react-app-wp-swc/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "react-app-wp-swc:build"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/react-app-wp-swc/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
