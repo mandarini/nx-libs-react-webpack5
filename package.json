@@ -1,0 +1,14 @@
+{
+  "name": "react-libs",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+    "nx": "16.0.0-beta.4",
+    "@nx/workspace": "16.0.0-beta.4"
+  }
+}
